@@ -16,3 +16,12 @@
 """
 
 mac = "AAAA:BBBB:CCCC"
+mac_list = mac.split(':')
+num1 = mac_list[0].lower()
+num2 = mac_list[1].lower()
+num3 = mac_list[2].lower()
+num_dec1 = int(num1, 16)
+num_dec2 = int(num2, 16)
+num_dec3 = int(num3, 16)
+result = "{}{}{}".format(bin(num_dec1)[2:], bin(num_dec2)[2:], bin(num_dec3)[2:])
+print(result)

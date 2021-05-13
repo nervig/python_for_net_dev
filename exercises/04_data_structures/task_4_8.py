@@ -26,3 +26,8 @@
 """
 
 ip = "192.168.3.1"
+ip_list = ip.split('.')
+result = f"{bin(int(ip_list[0]))[2:]}  {bin(int(ip_list[1]))[2:]}  {bin(int(ip_list[2]))[2:]:0>8}"
+print("{:10}  {:10}  {:10}  {:10}".format(ip_list[0], ip_list[1], ip_list[2], ip_list[3]))
+print("{:10}  {:10}  {:10}  {:10}".format(bin(int(ip_list[0]))[2:].zfill(8), bin(int(ip_list[1]))[2:].zfill(8),
+                                          bin(int(ip_list[2]))[2:].zfill(8), bin(int(ip_list[3]))[2:].zfill(8)))
